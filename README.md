@@ -1,7 +1,8 @@
 <h1 align="center"> NLW #10 Copa </h1>
 
-Link do projeto: https://leonardod3v.github.io/nlw-10-copa/
-
+<p align="center">
+  Link do projeto: https://leonardod3v.github.io/nlw-10-copa/
+<p>
 <p align="center">
 Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
 </p>
