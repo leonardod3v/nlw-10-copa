@@ -10,7 +10,7 @@ function createGame(player1, hour, player2) {
     `
 }
 
-let delay = 0
+let delay = 1
 
 function createCard(date, day, games) {
 
