@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+:root {
+    --card-title-border-color: #2f3579;
+    --card-color-primary: #e6f117;
+}
+
+body {
+    background: hsl(240, 6%, 7%);
+    background-image: url(./assets/bg.svg);
+    background-position-x: center;
+    background-position-y: -715px;
+    animation: changeColor 10s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+ul {
+    list-style: none;
+}
+
+#app {
+    width: fit-content;
+    margin: 3.25rem auto;
+}
+
+header {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+main#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .card {
+    padding: 2rem 1.43rem;
+    text-align: center;
+
+    background: #e5e5e4;
+    border-bottom: 2px solid var(--card-color-primary);
+    border-radius: 6px;
+}
+
+main .card h2 {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-title-border-color);
+    border-radius: 6px;
+
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 3.3125rem;
+
+    color: #2661f6;
+}
+
+main .card h2 span {
+    color: #3b3b3b;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+main .card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 270px;
+}
+
+main .card ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card ul li + li {
+    padding-top: 2rem;
+    border-top: 1px solid #000;
+}
+
+main .card ul li strong {
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 125%;
+    color: #121212;
+}
+
+main .card h2:hover,
+main .card ul li strong:hover,
+main .card ul li img:hover {
+    transform: scale(1.1);
+}
+
+main .card h2,
+main .card ul li strong,
+main .card ul li img {
+    transition: transform 0.3s;
+}
+
+main .card {
+    animation: appear .2s;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: hsl(240, 6%, 7%);
+    }
+
+    20% {
+        background-color: hsl(274, 85%, 29%);
+    }
+
+    40% {
+        background-color: hsl(171, 90%, 24%);
+    }
+
+    60% {
+        background-color: rgb(145, 22, 22);
+    }
+
+    80% {
+        background-color: rgb(158, 116, 9);
+    }
+
+    100% {
+        background-color: hsl(240, 6%, 7%);
+    }
+
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 720px) {
+
+    main {
+        margin: auto;
+        justify-content: center;
+    }
+
+    main#cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
